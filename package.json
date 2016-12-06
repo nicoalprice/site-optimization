@@ -1,0 +1,19 @@
+{
+  "name": "site-optimization",
+  "version": "1.0.0",
+  "description": "\"\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicoalprice/site-optimization.git"
+  },
+  "author": "Nicoal Price",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicoalprice/site-optimization/issues"
+  },
+  "homepage": "https://github.com/nicoalprice/site-optimization#readme"
+}
