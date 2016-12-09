@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 
 // concatenate JS
 gulp.task('concatJS', function(){
-	gulp.src(['js/fastclick.js',
+	return gulp.src(['js/fastclick.js',
 			  'js/foundation.js',
 			  'js/foundation.equalizer.js',
 			  'js/foundation.reveal.js'])
@@ -17,7 +17,7 @@ gulp.task('concatJS', function(){
 });
 
 // minify JS
-gulp.task('minifyJS', function(){
+gulp.task('minifyJS', ['concatJS'], function(){
 	gulp.src('js/app.js')
 	.pipe(uglify())
 	.pipe(rename('app.min.js'))
@@ -26,7 +26,7 @@ gulp.task('minifyJS', function(){
 
 // concatenate CSS
 gulp.task('concatCSS', function(){
-	gulp.src(['css/normalize.css',
+	return gulp.src(['css/normalize.css',
 			  'css/foundation.css',
 			  'css/basics.css',
 			  'css/menu.css',
@@ -39,7 +39,7 @@ gulp.task('concatCSS', function(){
 });
 
 // minify CSS
-gulp.task('minifyCSS', function(){
+gulp.task('minifyCSS', ['concatCSS'], function(){
 	gulp.src('css/styles.css')
 	.pipe(uglifyCSS('css/styles.css'))
 	.pipe(rename('styles.min.css'))
