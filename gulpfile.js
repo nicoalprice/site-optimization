@@ -46,12 +46,12 @@ gulp.task('minifyCSS', ['concatCSS'], function(){
 	.pipe(gulp.dest('css'))
 });
 
-// watch for file changes
-//gulp.task('watch', function() {
-//  gulp.watch('scripts/hello.coffee', ['coffee']);
-//  gulp.watch('scripts/*.js', ['js']);
-//  gulp.watch('styles/main.scss', ['sass']);
+////watch
+//gulp.task('watch', function(){
+//	gulp.watch(,[])
 //});
-
+//
+////serve
+//gulp.task('serve', ['watch']);
 
 gulp.task('default', ['concatJS', 'minifyJS', 'concatCSS', 'minifyCSS']);
