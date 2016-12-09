@@ -23,7 +23,7 @@ gulp.task('minifyJS', function(){
 	.pipe(gulp.dest('js'))
 });
 
-
+// concatenate CSS
 
 // watch for file changes
 //gulp.task('watch', function() {
@@ -42,13 +42,6 @@ gulp.task('minifyJS', function(){
 //    uglify = require('gulp-uglify'),
 //    concat = require('gulp-concat');
 //
-//var coffeeSources = ['scripts/hello.coffee'],
-//    jsSources = ['scripts/*.js'],
-//    sassSources = ['styles/*.scss'],
-//    htmlSources = ['**/*.html'],
-//    outputDir = 'assets';
-//
-//
 //gulp.task('log', function() {
 //  gutil.log('== My First Task ==')
 //});
@@ -65,21 +58,8 @@ gulp.task('minifyJS', function(){
 //  .pipe(gulp.dest('assets'))
 //  .pipe(connect.reload())
 //});
-//
-//gulp.task('coffee', function() {
-//  gulp.src(coffeeSources)
-//  .pipe(coffee({bare: true})
-//    .on('error', gutil.log))
-//  .pipe(gulp.dest('scripts'))
-//});
-//
-//gulp.task('js', function() {
-//  gulp.src(jsSources)
-//  .pipe(uglify())
-//  .pipe(concat('script.js'))
-//  .pipe(gulp.dest(outputDir))
-//  .pipe(connect.reload())
-//});
+////
+
 //
 //gulp.task('watch', function() {
 //  gulp.watch(coffeeSources, ['coffee']);
