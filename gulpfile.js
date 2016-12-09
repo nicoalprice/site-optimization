@@ -53,37 +53,5 @@ gulp.task('minifyCSS', function(){
 //  gulp.watch('styles/main.scss', ['sass']);
 //});
 
-/* Sample gulp js file from https://semaphoreci.com/community/tutorials/getting-started-with-gulp-js */
 
-//var gulp = require('gulp'),
-//    gutil = require('gulp-util'),
-//    sass = require('gulp-sass'),
-//    coffee = require('gulp-coffee'),
-//    connect = require('gulp-connect'),
-//    uglify = require('gulp-uglify'),
-//    concat = require('gulp-concat');
-//
-//gulp.task('log', function() {
-//  gutil.log('== My First Task ==')
-//});
-
-//gulp.task('watch', function() {
-//  gulp.watch(coffeeSources, ['coffee']);
-//  gulp.watch(jsSources, ['js']);
-//  gulp.watch(sassSources, ['sass']);
-//  gulp.watch(htmlSources, ['html']);
-//});
-//
-//gulp.task('connect', function() {
-//  connect.server({
-//    root: '.',
-//    livereload: true
-//  })
-//});
-//
-//gulp.task('html', function() {
-//  gulp.src(htmlSources)
-//  .pipe(connect.reload())
-//});
-//
-//gulp.task('default', ['concatJS', 'minifyJS', 'concatCSS', 'minifyCSS']);
+gulp.task('default', ['concatJS', 'minifyJS', 'concatCSS', 'minifyCSS']);
