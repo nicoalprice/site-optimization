@@ -1,15 +1,29 @@
-var gulp = require('gulp');
+'use strict';
 
-// minify
-var uglify = require('gulp-uglify'),
-	concat = require('gulp-concat');
+var gulp = require('gulp'),
+	concat = require('gulp-concat'),
+	uglify = require('gulp-uglify'),
+	rename = require('gulp-rename');
 
-gulp.task('js', function() {
-  gulp.src('sripts/*.js')
-  .pipe(uglify())
-  .pipe(concat('script.js'))
-  .pipe(gulp.dest('assets'))
+// concatenate JS
+gulp.task('concatJS', function(){
+	gulp.src(['js/fastclick.js',
+			  'js/foundation.js',
+			  'js/foundation.equalizer.js',
+			  'js/foundation.reveal.js'])
+	.pipe(concat('app.js'))
+	.pipe(gulp.dest('js'))
 });
+
+// minify JS
+gulp.task('minifyJS', function(){
+	gulp.src('js/app.js')
+	.pipe(uglify())
+	.pipe(rename('app.min.js'))
+	.pipe(gulp.dest('js'))
+});
+
+
 
 // watch for file changes
 //gulp.task('watch', function() {

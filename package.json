@@ -1,7 +1,7 @@
 {
   "name": "site-optimization",
   "version": "1.0.0",
-  "description": "\"\"",
+  "description": "site optimization project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/nicoalprice/site-optimization/issues"
   },
-  "homepage": "https://github.com/nicoalprice/site-optimization#readme"
+  "homepage": "https://github.com/nicoalprice/site-optimization#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "rename": "^1.0.3"
+  }
 }
