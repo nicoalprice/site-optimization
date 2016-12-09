@@ -3,7 +3,8 @@
 var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglify'),
-	rename = require('gulp-rename');
+	rename = require('gulp-rename'),
+	uglifyCSS = require('gulp-uglifycss');
 
 // concatenate JS
 gulp.task('concatJS', function(){
@@ -24,6 +25,26 @@ gulp.task('minifyJS', function(){
 });
 
 // concatenate CSS
+gulp.task('concatCSS', function(){
+	gulp.src(['css/normalize.css',
+			  'css/foundation.css',
+			  'css/basics.css',
+			  'css/menu.css',
+			  'css/hero.css',
+			  'css/photo-grid.css',
+			  'css/modals.css',
+			  'css/footer.css'])
+	.pipe(concat('styles.css'))
+	.pipe(gulp.dest('css'))
+});
+
+// minify CSS
+gulp.task('minifyCSS', function(){
+	gulp.src('css/styles.css')
+	.pipe(uglifyCSS('css/styles.css'))
+	.pipe(rename('styles.min.css'))
+	.pipe(gulp.dest('css'))
+});
 
 // watch for file changes
 //gulp.task('watch', function() {
@@ -45,22 +66,7 @@ gulp.task('minifyJS', function(){
 //gulp.task('log', function() {
 //  gutil.log('== My First Task ==')
 //});
-//
-//gulp.task('copy', function() {
-//  gulp.src('index.html')
-//  .pipe(gulp.dest(outputDir))
-//});
-//
-//gulp.task('sass', function() {
-//  gulp.src(sassSources)
-//  .pipe(sass({style: 'expanded'}))
-//    .on('error', gutil.log)
-//  .pipe(gulp.dest('assets'))
-//  .pipe(connect.reload())
-//});
-////
 
-//
 //gulp.task('watch', function() {
 //  gulp.watch(coffeeSources, ['coffee']);
 //  gulp.watch(jsSources, ['js']);
@@ -80,4 +86,4 @@ gulp.task('minifyJS', function(){
 //  .pipe(connect.reload())
 //});
 //
-//gulp.task('default', ['html', 'coffee', 'js', 'sass', 'connect', 'watch']);
+//gulp.task('default', ['concatJS', 'minifyJS', 'concatCSS', 'minifyCSS']);
