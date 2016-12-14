@@ -31,13 +31,9 @@ body {
  */
 
 article,
-aside,
 details,
-figcaption,
-figure,
 footer,
 header,
-hgroup,
 main,
 menu,
 nav,
@@ -405,11 +401,6 @@ meta.foundation-version{font-family:"/5.5.3/"}meta.foundation-mq-small{font-fami
 body {
 	background-color: rgb(235, 236, 237);
 }
-/*
-
-font-family: 'Ubuntu', sans-serif;
-font-family: 'Arvo', serif;
-*/
 
 .menu {
 	background-color: rgb(239, 240, 241);
