@@ -4,7 +4,8 @@ var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename'),
-	uglifyCSS = require('gulp-uglifycss');
+	uglifyCSS = require('gulp-uglifycss'),
+	image = require('gulp-image');
 
 // concatenate JS
 gulp.task('concatJS', function(){
@@ -27,7 +28,7 @@ gulp.task('minifyJS', ['concatJS'], function(){
 // concatenate CSS
 gulp.task('concatCSS', function(){
 	return gulp.src(['css/normalize.css',
-			  'css/foundation.css',
+			  'css/foundation.min.css',
 			  'css/basics.css',
 			  'css/menu.css',
 			  'css/hero.css',
@@ -46,6 +47,14 @@ gulp.task('minifyCSS', ['concatCSS'], function(){
 	.pipe(gulp.dest('css'))
 });
 
+//compress images
+gulp.task('compressImages', function(){
+	gulp.src(['img/photos/*',
+			  'img/avatars/*'])
+	.pipe(image())
+	.pipe(gulp.dest('img/photos'))
+});
+
 ////watch
 //gulp.task('watch', function(){
 //	gulp.watch(,[])
@@ -54,4 +63,4 @@ gulp.task('minifyCSS', ['concatCSS'], function(){
 ////serve
 //gulp.task('serve', ['watch']);
 
-gulp.task('default', ['concatJS', 'minifyJS', 'concatCSS', 'minifyCSS']);
+gulp.task('default', ['concatJS', 'minifyJS', 'concatCSS', 'minifyCSS', 'compressImages']);
