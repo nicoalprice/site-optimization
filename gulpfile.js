@@ -63,4 +63,4 @@ gulp.task('compressImages', function(){
 ////serve
 //gulp.task('serve', ['watch']);
 
-gulp.task('default', ['concatJS', 'minifyJS', 'concatCSS', 'minifyCSS', 'compressImages']);
+gulp.task('default', ['concatJS', 'minifyJS', 'concatCSS', 'minifyCSS']);
