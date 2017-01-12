@@ -12,7 +12,9 @@ gulp.task('concatJS', function(){
 	return gulp.src(['js/fastclick.js',
 			  'js/foundation.js',
 			  'js/foundation.equalizer.js',
-			  'js/foundation.reveal.js'])
+				 'js/modal-images.js',
+			  'js/foundation.reveal.js'
+])
 	.pipe(concat('app.js'))
 	.pipe(gulp.dest('js'))
 });
