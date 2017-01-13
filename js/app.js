@@ -855,7 +855,9 @@ $('img').click( function() {
 	// Add -large to end of image name
 	var largeImage = source.replace('.jpg', '-large.jpg');
 	//Change image source of modal to large image
-	$('#' + photoID).children('img').attr('src', largeImage);
+	if (photoID != "photo2-1") {
+		$('#' + photoID).children('img').attr('src', largeImage);
+	}
 });
 
 ;(function ($, window, document, undefined) {
