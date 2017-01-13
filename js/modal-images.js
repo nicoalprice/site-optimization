@@ -1,16 +1,12 @@
-// when photo is clicked
+// Load large images only when thumbnail is clicked
 
 $('img').click( function() {
-	console.log('You clicked an image.');
-	// check src
-	var source = $this.attr('src');
-	var photoID = $(this.attr('photo-reveal-id');
-
-	//change src for modal img -small or add large
-
-
-	// get photo-reveal-id
+	// Get image src
+	var source = $(this).attr('src');
+	// Get photo's ID
+	var photoID = 'photo' + $(this).attr('id');
+	// Add -large to end of image name
+	var largeImage = source.replace('.jpg', '-large.jpg');
+	//Change image source of modal to large image
+	$('#' + photoID).children('img').attr('src', largeImage);
 });
-
-//var photoNumber = photoID [minus the first portion, photo1-]
-//$('#photoID').attr('src', [image]);
