@@ -454,8 +454,8 @@ body {
 	width: 50px;
 }
 
-.avatar1, .avatar2, .avatar3, .avatar5, .avatar6, .avatar7{
-	background: url('../img/sprites.png') no-repeat;
+.avatar1-big, .avatar1, .avatar2, .avatar3, .avatar5, .avatar6, .avatar7, .avatar2-big, .avatar3-big, .avatar5-big, .avatar6-big, .avatar7-big{
+	background: url(../img/avatar-sprite-sheet.png) no-repeat;
 }
 
 .avatar1{
@@ -465,33 +465,69 @@ body {
 }
 
 .avatar2{
-	background-position: -100px 0;
+	background-position: -50px 0;
 	width: 50px;
 	height: 50px;
 }
 
 .avatar3{
-	background-position: -200px 0;
+	background-position: -100px 0;
 	width: 50px;
 	height: 50px;
 }
 
 .avatar5{
-	background-position: 0 -100px ;
+	background-position: -150px 0;
 	width: 50px;
 	height: 50px;
 }
 
 .avatar6{
-	background-position: -100px -100px ;
+	background-position: -200px 0;
 	width: 50px;
 	height: 50px;
 }
 
 .avatar7{
-	background-position: -200px -100px ;
+	background-position: -250px 0;
 	width: 50px;
 	height: 50px;
+}
+
+.avatar1-big{
+	background-position: 0 -55px ;
+	width: 75px;
+	height: 75px;
+}
+
+.avatar2-big{
+	background-position: -100px -55px ;
+	width: 75px;
+	height: 75px;
+}
+
+.avatar3-big{
+	background-position: -200px -55px ;
+	width: 75px;
+	height: 75px;
+}
+
+.avatar5-big{
+	background-position: 0 -135px ;
+	width: 75px;
+	height: 75px;
+}
+
+.avatar6-big{
+	background-position: -100px -135px ;
+	width: 75px;
+	height: 75px;
+}
+
+.avatar7-big{
+	background-position: -200px -135px ;
+	width: 75px;
+	height: 75px;
 }
 
 
@@ -544,22 +580,22 @@ body {
 }
 
 .reveal-modal .info {
-    padding: 2rem 1rem 0;
+	padding: 2rem 1rem 0;
 }
 .reveal-modal .info .attribution {
-    color: rgb(73, 85, 96);
-    font-family: "Ubuntu";
-    line-height: 75px;
+	color: rgb(73, 85, 96);
+	font-family: "Ubuntu";
+	line-height: 75px;
 }
 .reveal-modal .info .attribution b {
-    font-weight: 700;
+	font-weight: 700;
 }
 .reveal-modal .info .avatar {
-    border-radius: 50%;
-    float: left;
-    height: 75px;
-    margin-right: 1rem;
-    width: 75px;
+	border-radius: 50%;
+	float: left;
+	height: 75px;
+	margin-right: 1rem;
+	width: 75px;
 }
 
 footer {

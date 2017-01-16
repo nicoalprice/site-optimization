@@ -34,7 +34,7 @@ gulp.task('concatCSS', function(){
 			  'css/basics.css',
 			  'css/menu.css',
 			  'css/hero.css',
-			  'css/sprites.css',
+			  'css/avatar-sprites.css',
 			  'css/photo-grid.css',
 			  'css/modals.css',
 			  'css/footer.css'])
